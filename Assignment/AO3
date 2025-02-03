@@ -1,3 +1,13 @@
+# Instruction:
+# Introduction: Describe the purpose of the assignment and the structure of the BST.
+# Deletion Cases: List and explain the three cases involved in deleting a node from a BST:
+- Node has no children (leaf node).
+- Node has one child.
+- Node has two children (requires finding and replacing with the inorder successor or predecessor).
+# Explanation of Code: Describe the new delete function and its helper functions.
+# Steps for Deletion: Include a brief explanation of how the delete function works, including recursion and how it handles the different cases.
+
+This is the code:
 #include <iostream>
 using namespace std;
 
@@ -149,4 +159,17 @@ int main() {
 
     return 0;
 }
+
+Explanation of the Changes
+_delete function: This is the recursive function that performs the actual deletion. It handles all three cases:
+
+Case 1: If the node has no children, it simply deletes the node.
+Case 2: If the node has one child, it returns the child node to be connected to the parent.
+Case 3: If the node has two children, it finds the inorder successor (the smallest node in the right subtree), replaces the node's value with the successor's value, and recursively deletes the successor.
+_minValueNode function: This function finds the minimum node in a subtree (used to find the inorder successor).
+
+deleteNode function: This is a public method that calls _delete to remove a node from the tree.
+
+Instruction
+
 
