@@ -13,5 +13,5 @@
 
 #### Avatar:
 
-<img src="z6273778418349_318c0e2bdf32d24276cf68d257a2cf85.jpg" width="75">
+<img src="file:///C:/Users/lapto/OneDrive/Pictures/Camera%20Roll/z6273778418349_318c0e2bdf32d24276cf68d257a2cf85.jpg" width="75">
 
