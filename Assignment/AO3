@@ -170,6 +170,5 @@ _minValueNode function: This function finds the minimum node in a subtree (used 
 
 deleteNode function: This is a public method that calls _delete to remove a node from the tree.
 
-Instruction
 
 
