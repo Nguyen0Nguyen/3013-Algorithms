@@ -1,0 +1,42 @@
+Set 1: Left-Right and Right-Left Rotations
+Insert the following values in order:
+
+10, 20, 30, 15, 25, 5, 35, 27
+
+    20
+   /  \
+ 10    27
+ / \   / \
+5  15 25 30
+           \
+           35
+
+Set 2: Multiple Rotations in Different Branches
+Insert the following values in order:
+
+50, 40, 45, 60, 55, 70, 35, 30, 65, 75, 43
+
+      45
+     /  \
+   35    50
+  /    /    \
+30    43     60
+     /      /   \
+    40     55    70
+                /   \
+               65    75
+
+Set 3: Alternating Insertions Causing Frequent Rebalancing
+Insert the following values in order:
+
+100, 90, 110, 80, 95, 85, 105, 120, 102, 108
+
+        100
+      /     \
+     85       108
+   /  \      /    \
+ 80   90    105   110
+       \    / \      \
+       95  102 106    120
+
+
