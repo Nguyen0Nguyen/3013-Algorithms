@@ -1,0 +1,190 @@
+Part A: Conceptual Questions
+
+Define Hashing and Collision Resolution
+
+A hash table is a data structure that maps keys to values using a hash function to determine the storage index. Collision resolution is necessary when multiple keys hash to the same index.
+
+Key Differences Between Open Hashing (Chaining) and Closed Hashing (Open Addressing)
+
+Open Hashing: Uses linked lists at each index to store multiple keys.
+
+Closed Hashing: Stores all elements within the array and resolves collisions by probing.
+
+Collision Resolution Techniques
+
+Linear Probing: Resolves collisions by checking the next available slot sequentially.
+
+Pros: Simple to implement.
+
+Cons: Causes primary clustering.
+
+Quadratic Probing: Resolves collisions by probing quadratic distances.
+
+Pros: Reduces clustering.
+
+Cons: May not find an empty slot in a full table.
+
+Double Hashing: Uses a secondary hash function for probing.
+
+Pros: Avoids clustering.
+
+Cons: More computational overhead.
+
+Which Collision Resolution Technique Handles More Values Than Table Slots?
+
+Open Hashing can handle more values than the number of slots because it uses linked lists.
+
+Worst-Case Performance (Big-O) for Collision Resolution Techniques
+
+Separate Chaining: O(n) in worst case (if all elements hash to the same bucket).
+
+Linear Probing: O(n) in worst case (long probe sequence).
+
+Quadratic Probing: O(n) in worst case.
+
+Double Hashing: O(n) in worst case.
+
+Impact of Hash Table Size
+
+A poorly chosen table size (like a power of 2) can cause clustering and poor distribution of keys.
+
+Prime table sizes help distribute keys more evenly.
+
+Part B: Simulation and Diagram Exercises
+
+Exercise 1: Open Hashing (Separate Chaining)
+
+Hash Function: h(k) = k mod 10
+
+Table size: 10
+
+Keys: {5, 22, 17, 18, 35, 101, 16, 0, 8}
+
+Index
+
+Values
+
+0
+
+0
+
+1
+
+101
+
+2
+
+22
+
+3
+
+
+
+4
+
+
+
+5
+
+5, 35
+
+6
+
+16
+
+7
+
+17
+
+8
+
+8
+
+9
+
+18
+
+Exercise 2: Closed Hashing (Linear Probing)
+
+Index
+
+Values
+
+0
+
+0
+
+1
+
+101
+
+2
+
+22
+
+3
+
+
+
+4
+
+
+
+5
+
+5
+
+6
+
+16
+
+7
+
+17
+
+8
+
+8
+
+9
+
+18
+
+Observations:
+
+Linear probing causes clustering, making future insertions inefficient.
+
+Exercise 3: Impact of Poor Table Sizes
+
+Table size 10 (mod 10): All keys collide at the same bucket ({5, 10, 15, 20, 25, 30, 35, 40}).
+
+Table size 11 (mod 11): The keys are spread more evenly across buckets.
+
+Conclusion: Prime table sizes reduce clustering.
+
+Optional Extra Credit: Quadratic Probing
+
+Hash function: h(k) = k mod 10
+
+Keys: {12, 23, 34, 45, 56, 67, 78, 89}
+
+Quadratic probing reduces clustering by spreading keys out better than linear probing.
+
+Part C: Reflection & Short-Answer Questions (Optional)
+
+Real-World Impact of Poor Hash Table Size
+
+Poor table size selection leads to clustering, increasing search time.
+
+Handling High-Load Scenarios
+
+Open Hashing scales better under high load since linked lists dynamically grow.
+
+High-Frequency Trading System Design
+
+Double Hashing is a good choice due to reduced clustering and efficient lookups.
+
+Hybrid Hash Table Design
+
+A hybrid approach could use separate chaining with limited open addressing for faster retrieval.
+
